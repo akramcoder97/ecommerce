@@ -50,8 +50,8 @@
          }
         .custom-product{
             margin-top: 50px;
-            background-color: black; !important
-        }
+/*             background-color: black; !important
+ */        }
         .login-section{
             height: 500px;
             padding-top: 80px;
@@ -70,6 +70,18 @@
        .detail-image{
             height: 250px;
        }
+      
+       /* cart list page-------- */
+
+        .trending-wraper{
+            margin-left: 30px;
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:space-around;
+        }
+       .trending-img{
+            width:130px;
+        }
     </style>
 </body>
 </html>

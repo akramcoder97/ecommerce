@@ -39,7 +39,7 @@ if(Session::has('user'))
         </form>
         <ul class="nav nav-bar navbar-right">
           <li>
-            <a class="">Cart <span class="badge">({{$total}})</span></a>
+            <a href="/cartList" class="">Cart <span class="badge">({{$total}})</span></a>
           </li>
         
         @if(Session::has('user')) 
