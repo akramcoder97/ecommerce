@@ -46,20 +46,36 @@ class ProductController extends Controller
     }
 
     // ----- line 9 added
-    function cartList(Request $req)
+     function cartList(Request $req)
     {
         if($req->session()->has('user'))
         {
-        $userId=Session::get('user')['id'];
-        $products= DB::table('cart')
-        ->join('products','cart.product_id','=','products.id')
-        ->where('cart.user_id',$userId)
-        ->select('products.*')
-        ->get();
-        return view('cartList',['products'=>$products]);
+            $userId=Session::get('user')['id'];
+            $products= DB::table('cart')
+            ->join('products','cart.product_id','=','products.id')
+            ->where('cart.user_id',$userId)
+            ->select('products.*','cart.id as cart_id')
+            ->get();
+            return view('cartList',['products'=>$products]);
         }
-    else{
+        else{
         return redirect('/login'); 
         }
+    } 
+    function removeCart($id)
+    {
+        Cart::destroy($id);
+        return redirect('cartList');
+    }
+
+    function orderNow()
+    {
+        $userId=Session::get('user')['id'];
+        $total = $products= DB::table('cart')
+        ->join('products','cart.product_id','=','products.id')
+        ->where('cart.user_id',$userId)
+        ->sum('products.price');        // return total ta3 les prix
+
+        return view('orderNow',['total'=>$total]);
     }
 }

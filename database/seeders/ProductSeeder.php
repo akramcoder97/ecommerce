@@ -37,7 +37,7 @@ class ProductSeeder extends Seeder
                 "price"       =>'99000da',
                 "description" =>'A smart tv with 8gb ram and much more features',
                 "category"    =>'Tv',
-                "gallery"     =>'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/71+7bU+fkVL._SL1500_.jpg',
+                "gallery"     =>'https://m.media-amazon.com/images/I/91bxMNaJGYL._AC_UF1000,1000_QL80_.jpg',
             ],
             [
                 'name'        =>'Beko Fridge',

@@ -4,6 +4,7 @@
 @section('content')
 <div class= "custom-product">
   <h3 class="ms-4">resultas des produits:</h3><br>
+  <a class="ms-4 btn btn-success" href="orderNow">Commander maintenat</a><br><br>
     <div class="ms-5" style="width: 70%;">
         
         <div class="trending-wrape">
@@ -25,7 +26,7 @@
                     </div>
                     <div class="trending-content col-sm-2">
                         <div class="my-auto">
-                            <button class="btn btn-danger">suprimer l'article</button>
+                            <a href="/remove/{{$item->cart_id}}" class="btn btn-danger">suprimer l'article</a>
                         </div>
                     </a>
                     </div>

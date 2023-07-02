@@ -1,4 +1,4 @@
- <?php 
+<?php 
 use App\Http\Controllers\ProductController;
 $total=0;
 if(Session::has('user'))
@@ -58,3 +58,6 @@ if(Session::has('user'))
     </div>
   </div>
 </nav>
+
+
+<!-- ---------------------------- -->
