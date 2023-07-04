@@ -25,16 +25,17 @@
         </tbody>
         </table>
         <div>
-            <form>
+            <form action="/orderplace" method="POST" >
+            @csrf
                 <div class="mb-3">
-                    <label for="">email</label>
-                    <input type="email" placeholder ="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <label for="">address</label>
+                    <input name="address" placeholder ="entrer votre address ici" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">method de payment :</label><br>
-                    <input type="radio" name="payment"><span>payment en ligne</span><br>
-                    <input type="radio" name="payment"><span>payment cash</span><br>
-                    <input type="radio" name="payment"><span>payment EMI</span><br>
+                    <input type="radio" value="cash" name="payment"><span>payment en ligne</span><br>
+                    <input type="radio" value="cash" name="payment"><span>payment cash</span><br>
+                    <input type="radio" value="cash" name="payment"><span>payment EMI</span><br>
                 </div>
                 <button type="submit" class="btn btn-primary">commander maintenat</button><br><br>
             </form>

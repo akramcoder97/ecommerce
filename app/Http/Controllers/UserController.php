@@ -22,4 +22,17 @@ class UserController extends Controller
             // edit on userAuth.php line 18/19/20..  added by php artisan make middleware and kernel.php line 21/.. 
         }
     }
+
+    
+    // --------- register -----------------
+
+    function register(Request $req)
+    {
+        $user = new User;
+        $user->name=$req->name;
+        $user->email=$req->email;
+        $user->password=Hash::make($req->password);
+        $user->save();
+        return redirect('/login');
+    }
 }
